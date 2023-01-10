@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+body{
+    margin:auto;
+    width: 80%;
+}
+.header{
+    background-color: rgb(212, 215, 238);
+    border-radius: 10px;
+}   
+.title{
+    padding: 20px; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+.title::first-letter{
+    font-size: 2.2em;
+}
+.navbar{
+    background-color: #222;
+    border-radius: 10px;
+    border:2px solid white;
+    display: flex;   
+}
+.navbar>a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+    padding: 20px;
+    font-size: large;
+}
+.navbar>a:hover{
+    background-color: black;
+}
+
+.row{
+    display: flex;
+}
+
+.main{
+    flex: 70%;
+    display: flex;
+    margin:20px;
+}
+.article{
+    flex: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+.article:hover{
+    border:1px solid rgb(110, 117, 180);
+    cursor: pointer;
+    background-color: rgb(212, 215, 238);
+}
+.article .titre{
+    font-size: 2em;
+    font-weight: bolder;
+    padding: 20px;
+}
+.article .description{
+    font-size: 1em;
+    font-weight: bolder;
+    padding: 20px;
+    text-align: center;
+}
+
+.article .tuto , .exe, .quiz{
+    width: 80%;
+    padding: 15px;
+    font-size: large;
+    background-color:rgb(191, 196, 241);
+    border-radius:  50px;
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+.aside{
+    flex: 20%;
+}
+.aside fieldset{
+    border-radius: 10px;
+    border:1px solid rgb(110, 117, 180);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.aside input{
+    padding: 10px;
+    border: 1px solid rgb(110, 117, 180);
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.aside input[type=submit]
+{
+    background-color:rgb(110, 117, 180);
+    color: white;
+    font-weight: bolder;
+}
+.aside p{
+    text-align: center;
+}
+.aside a{
+    text-decoration: none;
+    color: rgb(110, 117, 180);
+    font-weight: bolder;
+}
+
+@media screen and (max-width:450px) {
+    .row, .navbar, .main{
+        flex-direction: column;
+    }
+    .article{
+        width: 100%;
+        padding: 0px;
+        margin:0px;
+    }
+    .article .tuto , .exe, .quiz, .description{
+        display: none;
+
+    }
+}
